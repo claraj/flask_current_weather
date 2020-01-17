@@ -46,10 +46,10 @@ def get_conditions(city, state):
 def get_current(weather_list):
     if weather_list[0:1]:
         now = weather_list[0]
-        name = now.get('name').title()
+        period_name = now.get('name').title()
         temp_f = now.get('temperature')
         detail = now.get('detailedForecast')
-        return f'{name}: {temp_f} °F, {detail}'
+        return f'{period_name}: {temp_f}F, {detail}'
 
 
     
