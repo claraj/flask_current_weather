@@ -1,4 +1,4 @@
-from flask import Flask, request, abort
+from flask import Flask, request, send_file
 from weather import get_conditions
 
 app = Flask(__name__)
@@ -39,7 +39,7 @@ def weather_photo():
 
     photo = photo_path(conditions) 
     if photo:
-        return photo 
+        return send_file(photo)
     else:
         return 'No photo!' 
 
@@ -66,4 +66,6 @@ def photo_path(conditions):
 
     for con, photo in photo_map.items():
         if con.upper() in conditions.upper():
-            return f'{request.url_root}static/photos/{photo}'
+            return f'static/photos/{photo}'
+            # return f'{request.url_root}static/photos/{photo}'
+            
