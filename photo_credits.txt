@@ -1,4 +1,4 @@
-All photos from Unsplash.
+Weather Photos:: All photos from Unsplash.
 
 sun.jpeg Photo by Livin4wheel 
 partly_cloudy.jpeg Photo by Jason Blackeye 
@@ -11,3 +11,7 @@ thunderstorm.jpeg by @o0mix0o_pix
 cloudy.jpeg by @dannyeve
 clear.jpeg by @wx1993
 snow.jpeg by @chanphoto
+
+Error Icon
+
+https://icons8.com/icons/set/error-cloud" Error Cloud icon by Icons8.

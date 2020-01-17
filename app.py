@@ -41,6 +41,7 @@ def weather_photo():
     if photo:
         return send_file(photo)
     else:
+        print('conditions', conditions)
         return 'No photo!' 
 
 
@@ -68,4 +69,6 @@ def photo_path(conditions):
         if con.upper() in conditions.upper():
             return f'static/photos/{photo}'
             # return f'{request.url_root}static/photos/{photo}'
+
+    return f'static/photos/error.png'
             
