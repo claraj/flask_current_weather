@@ -44,7 +44,6 @@ def get_conditions(city, state):
 
 
 def get_current(weather_list):
-    print(weather_list)
     if weather_list[0:1]:
         now = weather_list[0]
         name = now.get('name').title()
@@ -80,10 +79,8 @@ def get_lat_long(city, state):
 def get_weather(coord):
     try:
         url = weather_point_url.format(*coord)
-        print('location data url: ', url)
         point_data_response = requests.get(url).json()
         forecast_url = point_data_response['properties']['forecast']
-        print('forecast data url', forecast_url)
         forecast_response = requests.get(forecast_url).json()
 
         if 'properties' in forecast_response:
