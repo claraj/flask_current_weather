@@ -57,9 +57,9 @@ def get_lat_long(city, state):
 
     place_query = f'{city},{state}'
 
-    cached = in_cache(place_query)
-    if cached:
-        return cached, place_query
+    # cached = in_cache(place_query)
+    # if cached:
+    #     return cached, place_query
 
     print(f'geocoding place "{place_query}"...')
     
@@ -72,7 +72,7 @@ def get_lat_long(city, state):
         first_result = response[0]
         coords = float(first_result['lat']), float(first_result['lon'])
         name = first_result['display_name']
-        cache(place_query, coords)  # what the user typed in 
+        #cache(place_query, coords)  # what the user typed in 
         return coords, name  # Official name 
 
 
